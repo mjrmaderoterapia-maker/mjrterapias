@@ -54,14 +54,15 @@
             text-decoration: none; 
             color: var(--blanco); 
             font-weight: 500;
-            font-size: 0.9rem;
+            font-size: 0.8rem; /* Un poco más pequeño para que quepa todo */
+            text-transform: uppercase;
         }
 
         .menu-toggle { display: none; cursor: pointer; font-size: 1.8rem; color: var(--blanco); }
 
         /* --- Hero Section --- */
         .hero {
-            height: 80vh;
+            height: 70vh; /* Espacio reducido */
             display: flex;
             align-items: center;
             justify-content: flex-start;
@@ -76,17 +77,9 @@
 
         .hero h1 { 
             font-family: var(--fuente-titulo); 
-            font-size: clamp(1.8rem, 4vw, 3rem); 
-            line-height: 1.4;
-            max-width: 850px;
-        }
-        
-        /* Título con sombreado verde y letras blancas */
-        .hero h1 span { 
-            background-color: var(--color-primario); 
-            padding: 5px 15px;
-            box-shadow: 10px 0 0 var(--color-primario), -10px 0 0 var(--color-primario);
-            color: var(--blanco);
+            font-size: clamp(2.5rem, 6vw, 4.5rem); /* Fuente más grande sin sombreado */
+            line-height: 1.1;
+            max-width: 900px;
         }
 
         .hero p { font-size: 1.2rem; margin-top: 20px; margin-bottom: 30px; font-weight: 300; }
@@ -100,72 +93,70 @@
             border-radius: 50px;
             font-weight: 600;
             transition: 0.3s;
+            border: none;
+            cursor: pointer;
         }
 
         /* --- Lead Magnet --- */
-        .lead-magnet { background-color: var(--color-primario); color: var(--blanco); padding: 40px 5%; text-align: center; }
+        .lead-magnet { background-color: var(--color-primario); color: var(--blanco); padding: 30px 5%; text-align: center; }
         .lead-magnet form { margin-top: 20px; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
         .lead-magnet input { padding: 12px 20px; border-radius: 25px; border: none; width: 300px; }
-        .lead-magnet button { background-color: var(--color-texto); color: var(--blanco); padding: 12px 30px; border: none; border-radius: 25px; cursor: pointer; font-weight: 600; }
 
-        /* --- Sección Descripción (Ahora en Blanco) --- */
-        .seccion-descripcion { background-color: var(--blanco); color: var(--color-texto); padding: 60px 10%; text-align: center; }
-        .logo-descripcion { width: 150px; margin-bottom: 30px; }
-        .texto-descripcion { max-width: 900px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8; }
+        /* --- Popup Estilo --- */
+        #popup-overlay {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8); z-index: 2000; justify-content: center; align-items: center;
+        }
+        .popup-content {
+            background: var(--blanco); padding: 40px; border-radius: 15px; text-align: center; max-width: 400px;
+        }
+        .popup-content h3 { font-family: var(--fuente-titulo); margin-bottom: 20px; color: var(--color-texto); }
 
-        /* --- Servicios --- */
-        .section-padding { padding: 80px 5%; max-width: 1200px; margin: auto; }
-        .grid-servicios { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 40px 0; }
-        
-        .card { 
-            background: var(--blanco); 
-            padding: 25px; 
-            border-radius: 15px; 
+        /* --- Sección Descripción con Foto a la Derecha --- */
+        .seccion-flex { 
+            background-color: var(--blanco); 
             display: flex; 
             align-items: center; 
-            gap: 20px;
-            text-align: left;
+            padding: 40px 10%; 
+            gap: 50px;
+            flex-wrap: wrap;
         }
-        .card img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
-        .card-content h3 { font-family: var(--fuente-titulo); font-size: 1.1rem; color: var(--color-primario); margin-bottom: 5px; }
-        .card-content p { font-size: 0.9rem; }
+        .texto-descripcion-izq { flex: 1; min-width: 300px; text-align: center; }
+        .foto-descripcion-der { flex: 1; min-width: 300px; }
+        .foto-descripcion-der img { width: 100%; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
-        /* --- Beneficios con Iconos --- */
-        .grid-beneficios { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin: 40px 0; text-align: center; }
-        .beneficio-item svg { width: 40px; height: 40px; margin-bottom: 15px; fill: var(--color-texto); }
-        .beneficio-item h4 { color: var(--color-primario); font-size: 1.3rem; margin-bottom: 10px; }
+        /* --- Servicios --- */
+        .section-padding { padding: 40px 5%; max-width: 1200px; margin: auto; }
+        .grid-servicios { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 30px 0; }
+        
+        .card { background: var(--blanco); padding: 25px; border-radius: 15px; display: flex; align-items: center; gap: 20px; }
+        .card img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; }
+        .card-content h3 { font-family: var(--fuente-titulo); font-size: 1.8rem; color: var(--color-primario); margin-bottom: 5px; }
 
-        /* --- Reseñas --- */
-        .grid-resenas { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
-        .resena { background: var(--blanco); padding: 25px; border-radius: 10px; font-style: italic; border: 1px solid rgba(0,0,0,0.05); }
+        /* --- Descuentos Únicos Ampliado --- */
+        .promo-box { text-align: center; background: white; padding: 40px; border-radius: 15px; margin-top: 20px; }
 
-        /* --- Galería --- */
-        .galeria-parrilla { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 30px; }
-        .galeria-parrilla img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 10px; }
+        /* --- Parrilla de fotos sin titulo --- */
+        .galeria-parrilla { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; padding: 20px 0; }
+        .galeria-parrilla img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 5px; }
 
-        /* --- Banner Final --- */
         .banner-final {
             background: linear-gradient(rgba(118, 155, 124, 0.85), rgba(118, 155, 124, 0.85)), 
                         url('https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=1500&q=80');
-            background-size: cover; padding: 100px 5%; text-align: center; color: var(--blanco);
+            background-size: cover; padding: 60px 5%; text-align: center; color: var(--blanco);
         }
 
-        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; text-decoration: none; }
 
-        footer { background-color: var(--color-texto); color: var(--blanco); padding: 40px 5%; text-align: center; }
-        footer a { color: var(--blanco) !important; text-decoration: none; margin: 0 10px; }
+        footer { background-color: var(--color-texto); color: var(--blanco); padding: 30px 5%; text-align: center; }
+        .footer-logo { width: 60px; border-radius: 50%; margin-bottom: 10px; }
 
-        /* --- Mobile --- */
         @media (max-width: 768px) {
             .menu-toggle { display: block; }
-            .nav-links { 
-                display: none; position: absolute; top: 100%; left: 0; width: 100%; 
-                background: var(--color-texto); flex-direction: column; padding: 20px; 
-            }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: var(--color-texto); flex-direction: column; padding: 20px; }
             .nav-links.active { display: flex; }
-            .nav-links li { margin: 15px 0; }
             .galeria-parrilla { grid-template-columns: repeat(2, 1fr); }
-            .hero { justify-content: center; text-align: center; }
+            .hero { text-align: center; padding-top: 100px; }
         }
     </style>
 </head>
@@ -174,20 +165,21 @@
     <header>
         <div class="header-left">
             <img src="https://i.ibb.co/p6Hqgf22/Logo-con-Tipograf-a-para-Iniciales-del-Nombre-Profesional-Circular-Limpio-Elegante-Blanco-Negro-2.png" alt="MJR" class="header-logo-img">
-            <a href="#" class="logo-text">MJR TERAPIAS</a>
+            <a href="inicio.html" class="logo-text">MJR TERAPIAS</a>
         </div>
         <div class="menu-toggle" id="mobile-menu">☰</div>
         <ul class="nav-links" id="nav-list">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#promociones">Promociones</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="tratamientos-corporales.html">Tratamientos Corporales</a></li>
+            <li><a href="pestanas.html">Pestañas</a></li>
+            <li><a href="promociones.html">Promociones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
         </ul>
     </header>
 
     <section class="hero" id="inicio">
         <div class="hero-content">
-            <h1><span>Maderoterapia y tratamientos corporales a domicilio en Madrid</span></h1>
+            <h1>Maderoterapia y tratamientos corporales a domicilio en Madrid</h1>
             <p>Especialistas en sacar toda tu belleza.</p>
             <a href="https://wa.me/34613389898?text=¡Hola!%20Quiero%20reservar%20cita." class="cta-btn">Reservar Cita WhatsApp</a>
         </div>
@@ -196,31 +188,39 @@
     <section class="lead-magnet">
         <h2>¿Quieres eliminar la retención de líquidos?</h2>
         <p>Descarga mi guía gratuita de cuidados en casa y obtén un 10% de descuento en tu primera sesión.</p>
-        <form>
+        <form id="leadForm" onsubmit="event.preventDefault(); showPopup();">
             <input type="text" placeholder="Tu nombre" required>
-            <input type="email" placeholder="Tu email" required>
-            <button type="submit">¡Enviar mi descuento!</button>
+            <input type="text" placeholder="Tu email o número de teléfono" required>
+            <button type="submit" class="cta-btn" style="background: var(--color-texto);">Acceder a la guía</button>
         </form>
     </section>
 
-    <section class="seccion-descripcion">
-        <img src="https://i.ibb.co/ch4Zb7Nc/Logo-con-Tipograf-a-para-Iniciales-del-Nombre-Profesional-Circular-Limpio-Elegante-Blanco-Negro-1.png" alt="Logo MJR" class="logo-descripcion">
-        <div class="texto-descripcion">
-            <p>🏠En MJR Terapias ofrecemos maderoterapia a domicilio en Madrid, drenaje linfático manual, masajes circulatorios y descontracturantes, presoterapia, reflexología podal, limpieza facial manual y dermapen, directamente en tu casa en Madrid.</p>
+    <div id="popup-overlay">
+        <div class="popup-content">
+            <h3>Gracias por contactar con nosotros</h3>
+            <p>Tu guía está lista para descargar.</p><br>
+            <a href="guiagratuita.html" class="cta-btn">Ver GUIA GRATUITA</a>
+        </div>
+    </div>
+
+    <section class="seccion-flex">
+        <div class="texto-descripcion-izq">
+            <p>En MJR Terapias ofrecemos maderoterapia a domicilio en Madrid, drenaje linfático manual, masajes circulatorios y descontracturantes, presoterapia, reflexología podal, limpieza facial manual y dermapen, directamente en tu casa en Madrid.</p>
             <br>
-            <p>💆‍♀️Resultados visibles desde la primera sesión y relajación total sin salir de casa.</p>
-            <p>🌿 Técnicas naturales y estéticas avanzadas</p>
+            <p>Resultados visibles desde la primera sesión y relajación total sin salir de casa.<br>Técnicas naturales y estéticas avanzadas</p>
             <br>
-            <p>👉Reserva ahora con un 15% de DESCUENTO en tu primera sesión individual.</p>
+            <p><strong>👉Reserva ahora con un 10% de DESCUENTO en tu primera sesión individual.</strong></p>
             <br>
-            <p>👀TAMBIEN ofrecemos EXTENSIONES DE PESTAÑAS PREMIUM en nuestro centro de Móstoles</p>
+            <p>TAMBIEN ofrecemos EXTENSIONES DE PESTAÑAS PREMIUM en nuestro centro de Móstoles</p>
             <br>
             <p style="font-weight: bold;">VER TODO LO QUE OFRECEMOS<br>▼</p>
+        </div>
+        <div class="foto-descripcion-der">
+            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" alt="Tratamiento MJR">
         </div>
     </section>
 
     <section class="section-padding" id="servicios">
-        <h2 style="font-family: var(--fuente-titulo); text-align: center; font-size: 2.2rem;">Nuestros Mejores Servicios</h2>
         <div class="grid-servicios">
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=200" alt="Maderoterapia">
@@ -244,51 +244,19 @@
                 </div>
             </div>
         </div>
-        <div style="text-align: center;">
-            <a href="servicios.html" class="cta-btn" style="background: var(--color-texto);">Todos nuestros servicios</a>
-        </div>
-    </section>
-
-    <section class="section-padding" style="background-color: var(--blanco);">
-        <div class="grid-beneficios">
-            <div class="beneficio-item">
-                <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-                <h4>Ahorra tiempo</h4>
-                <p>Tratamientos a domicilio en Madrid sin desplazarte.</p>
-            </div>
-            <div class="beneficio-item">
-                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                <h4>Resultados reales</h4>
-                <p>Reduce celulitis y hinchazón con técnicas naturales.</p>
-            </div>
-            <div class="beneficio-item">
-                <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
-                <h4>Comodidad total</h4>
-                <p>Relájate en tu casa sin mas preocupaciones.</p>
-            </div>
-        </div>
     </section>
 
     <section class="section-padding" id="promociones">
         <h2 style="font-family: var(--fuente-titulo); text-align: center;">Descuentos únicos.</h2>
-        <div style="text-align: center; background: white; padding: 40px; border-radius: 15px; margin-top: 20px;">
+        <div class="promo-box">
             <p>Ahorra con nuestros bonos especiales de 5 y 10 sesiones. La constancia es la clave de los resultados.</p>
+            <p>Nuestros paquetes están diseñados para aquellas personas que buscan un cambio real y duradero. Al contratar un bono, no solo aseguras tu cupo en nuestra agenda, sino que accedes a una tarifa preferencial mucho más económica que la sesión individual. Ideal para maderoterapia y drenaje linfático donde la repetición es fundamental.</p>
             <br>
             <a href="bonos.html" class="cta-btn">Ver más bonos</a>
         </div>
     </section>
 
-    <section class="section-padding" id="resenas">
-        <h2 style="font-family: var(--fuente-titulo); text-align: center;">Lo que dicen nuestras clientas.</h2>
-        <div class="grid-resenas">
-            <div class="resena">"Increíble la comodidad de tener el servicio en casa. La maderoterapia me ha cambiado las piernas." - <strong>Laura M.</strong></div>
-            <div class="resena">"Las pestañas me duran muchísimo y el trato es super profesional. Repetiré siempre." - <strong>Sara G.</strong></div>
-            <div class="resena">"Puntualidad y limpieza absoluta. MJR es mi referencia de estética en Móstoles." - <strong>Elena R.</strong></div>
-        </div>
-    </section>
-
-    <section class="section-padding" id="fotos">
-        <h2 style="font-family: var(--fuente-titulo); text-align: center;">FOTOS</h2>
+    <section class="section-padding">
         <div class="galeria-parrilla">
             <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400" alt="1">
             <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=400" alt="2">
@@ -301,7 +269,7 @@
         </div>
     </section>
 
-    <section class="section-padding" id="datos" style="background-color: var(--blanco);">
+    <section class="section-padding" id="datos" style="background-color: var(--blanco); padding: 30px 5%;">
         <div style="display: flex; justify-content: space-around; text-align: center; flex-wrap: wrap; gap: 20px;">
             <div><h2 style="color: var(--color-primario); font-size: 3rem;">+200</h2><p>Clientas Felices</p></div>
             <div><h2 style="color: var(--color-primario); font-size: 3rem;">100%</h2><p>Higienizado</p></div>
@@ -311,11 +279,11 @@
 
     <section class="banner-final">
         <h2 style="font-family: var(--fuente-titulo); font-size: 2.5rem; margin-bottom: 20px;">¿Lista para tu momento de bienestar?</h2>
-        <p style="margin-bottom: 30px;">Reserva hoy y deja que nos encarguemos de tu belleza sin moverte de casa.</p>
         <a href="https://wa.me/34613389898?text=¡Hola!%20Quiero%20reservar%20cita." class="cta-btn" style="background: var(--color-texto);">Reservar cita ahora</a>
     </section>
 
     <footer>
+        <img src="https://i.ibb.co/p6Hqgf22/Logo-con-Tipograf-a-para-Iniciales-del-Nombre-Profesional-Circular-Limpio-Elegante-Blanco-Negro-2.png" alt="MJR" class="footer-logo">
         <p style="font-family: var(--fuente-titulo); font-size: 1.5rem;">MJR TERAPIAS</p>
         <div style="margin: 20px 0;">
             <a href="https://www.instagram.com/mjrmaderoterapias?igsh=N2RrOHZnMGNranJs" target="_blank">Instagram</a> | 
@@ -332,6 +300,13 @@
         const menuToggle = document.getElementById('mobile-menu');
         const navList = document.getElementById('nav-list');
         menuToggle.addEventListener('click', () => { navList.classList.toggle('active'); });
+
+        function showPopup() {
+            // Abrir Google Form en pestaña nueva
+            window.open("https://docs.google.com/forms/d/e/1FAIpQLScKm5Nf3td9vD73HhdG2m0E0yrlfSNV_oe49NVVXFfCPqgjmg/viewform?usp=pp_url&entry.1619785240=jorge&entry.2080522746=696433920", "_blank");
+            // Mostrar Popup de agradecimiento
+            document.getElementById('popup-overlay').style.display = 'flex';
+        }
     </script>
 </body>
 </html>
