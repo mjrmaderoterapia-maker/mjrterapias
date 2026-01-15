@@ -56,7 +56,6 @@
             font-weight: 500;
             font-size: 0.8rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
         .menu-toggle { display: none; cursor: pointer; font-size: 1.8rem; color: var(--blanco); }
@@ -103,7 +102,7 @@
         .lead-magnet form { margin-top: 20px; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
         .lead-magnet input { padding: 12px 20px; border-radius: 25px; border: none; width: 300px; }
 
-        /* --- Popup Estilo --- */
+        /* --- Popup Estilo Mejorado --- */
         #popup-overlay {
             display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0,0,0,0.8); z-index: 2000; justify-content: center; align-items: center;
@@ -171,7 +170,8 @@
             }
             .nav-links.active { display: flex; }
             .nav-links li { margin: 20px 0; width: 100%; text-align: center; }
-            .nav-links a { font-size: 1.1rem; }
+            .nav-links a { font-size: 1.1rem; letter-spacing: 1px; display: block; width: 100%; }
+            .galeria-parrilla { grid-template-columns: repeat(2, 1fr); }
             .hero { text-align: center; }
             .card { flex-direction: column; text-align: center; }
         }
@@ -218,8 +218,7 @@
     <div id="popup-overlay">
         <div class="popup-content">
             <span class="close-popup" onclick="closePopup()">&times;</span>
-            <h3 style="font-family: var(--fuente-titulo); margin-bottom: 20px; font-size: 1.8rem;">Gracias por contactar con nosotros</h3>
-            <p>Tu guía está lista para descargar.</p><br>
+            <h3 style="font-family: var(--fuente-titulo); margin-bottom: 30px;">Gracias por contactar con nosotros</h3>
             <a href="guiagratuita.html" class="cta-btn">Ver GUIA GRATUITA</a>
         </div>
     </div>
@@ -355,7 +354,9 @@
         const menuToggle = document.getElementById('mobile-menu');
         const navList = document.getElementById('nav-list');
         
-        menuToggle.addEventListener('click', () => { navList.classList.toggle('active'); });
+        menuToggle.addEventListener('click', () => { 
+            navList.classList.toggle('active'); 
+        });
 
         function showPopup() {
             document.getElementById('popup-overlay').style.display = 'flex';
