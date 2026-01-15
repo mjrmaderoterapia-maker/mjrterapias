@@ -56,6 +56,7 @@
             font-weight: 500;
             font-size: 0.8rem;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .menu-toggle { display: none; cursor: pointer; font-size: 1.8rem; color: var(--blanco); }
@@ -108,7 +109,10 @@
             background: rgba(0,0,0,0.8); z-index: 2000; justify-content: center; align-items: center;
         }
         .popup-content {
-            background: var(--blanco); padding: 40px; border-radius: 15px; text-align: center; max-width: 400px;
+            background: var(--blanco); padding: 50px 40px; border-radius: 15px; text-align: center; max-width: 450px; position: relative;
+        }
+        .close-popup {
+            position: absolute; top: 15px; right: 20px; font-size: 1.5rem; cursor: pointer; color: var(--color-texto); font-weight: bold;
         }
 
         /* --- Sección Descripción --- */
@@ -130,7 +134,6 @@
         .grid-servicios { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 30px 0; }
         
         .card { background: var(--blanco); padding: 25px; border-radius: 15px; display: flex; align-items: center; gap: 20px; height: 100%; }
-        /* Arreglo dimensiones fotos circulares */
         .card img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
         .card-content h3 { font-family: var(--fuente-titulo); font-size: 1.8rem; color: var(--color-primario); margin-bottom: 5px; line-height: 1.2; }
 
@@ -161,9 +164,14 @@
 
         @media (max-width: 768px) {
             .menu-toggle { display: block; }
-            .nav-links { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: var(--color-texto); flex-direction: column; padding: 20px; }
+            .nav-links { 
+                display: none; position: absolute; top: 100%; left: 0; width: 100%; 
+                background: var(--color-texto); flex-direction: column; padding: 40px 20px;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+            }
             .nav-links.active { display: flex; }
-            .galeria-parrilla { grid-template-columns: repeat(2, 1fr); }
+            .nav-links li { margin: 20px 0; width: 100%; text-align: center; }
+            .nav-links a { font-size: 1.1rem; }
             .hero { text-align: center; }
             .card { flex-direction: column; text-align: center; }
         }
@@ -197,16 +205,20 @@
     <section class="lead-magnet">
         <h2>¿Quieres eliminar la retención de líquidos?</h2>
         <p>Descarga mi guía gratuita de cuidados en casa y obtén un 10% de descuento en tu primera sesión.</p>
-        <form id="leadForm" onsubmit="event.preventDefault(); showPopup();">
-            <input type="text" placeholder="Tu nombre" required>
-            <input type="text" placeholder="Tu email o número de teléfono" required>
+        
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {showPopup();}"></iframe>
+        
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLScKm5Nf3td9vD73HhdG2m0E0yrlfSNV_oe49NVVXFfCPqgjmg/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+            <input type="text" name="entry.1619785240" placeholder="Tu nombre" required>
+            <input type="text" name="entry.2080522746" placeholder="Tu email o número de teléfono" required>
             <button type="submit" class="cta-btn" style="background: var(--color-texto);">Acceder a la guía</button>
         </form>
     </section>
 
     <div id="popup-overlay">
         <div class="popup-content">
-            <h3 style="font-family: var(--fuente-titulo); margin-bottom: 20px;">Gracias por contactar con nosotros</h3>
+            <span class="close-popup" onclick="closePopup()">&times;</span>
+            <h3 style="font-family: var(--fuente-titulo); margin-bottom: 20px; font-size: 1.8rem;">Gracias por contactar con nosotros</h3>
             <p>Tu guía está lista para descargar.</p><br>
             <a href="guiagratuita.html" class="cta-btn">Ver GUIA GRATUITA</a>
         </div>
@@ -339,13 +351,18 @@
     </a>
 
     <script>
+        var submitted = false;
         const menuToggle = document.getElementById('mobile-menu');
         const navList = document.getElementById('nav-list');
+        
         menuToggle.addEventListener('click', () => { navList.classList.toggle('active'); });
 
         function showPopup() {
-            window.open("https://docs.google.com/forms/d/e/1FAIpQLScKm5Nf3td9vD73HhdG2m0E0yrlfSNV_oe49NVVXFfCPqgjmg/viewform?usp=pp_url&entry.1619785240=jorge&entry.2080522746=696433920", "_blank");
             document.getElementById('popup-overlay').style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('popup-overlay').style.display = 'none';
         }
     </script>
 </body>
