@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | MJR TERAPIAS - Reserva tu cita de Maderoterapia</title>
+    
+    <meta name="description" content="Contacta con MJR Terapias para reservar tu sesión de maderoterapia o pestañas. Servicio a domicilio en toda la Comunidad de Madrid. ¡Llámanos!">
+    <meta name="keywords" content="contacto maderoterapia madrid, reservar cita masajes, maderoterapia domicilio madrid, estetica contacto mostoles">
+    <meta name="author" content="MJR Terapias">
+    <link rel="canonical" href="https://mjrterapias.vercel.app/contacto.html">
+
+    <meta property="og:title" content="Contacta con MJR TERAPIAS | Reservas y Consultas">
+    <meta property="og:description" content="Estamos disponibles en toda la Comunidad de Madrid. Reserva tu tratamiento a domicilio ahora.">
+    <meta property="og:image" content="https://i.ibb.co/VcJKkFgJ/mjr-portada.png">
+    <meta property="og:url" content="https://mjrterapias.vercel.app/contacto.html">
+    <meta property="og:site_name" content="MJR TERAPIAS">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/png" href="https://i.ibb.co/p6Hqgf22/Logo-con-Tipograf-a-para-Iniciales-del-Nombre-Profesional-Circular-Limpio-Elegante-Blanco-Negro-2.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-fondo: #e6dfd8;
+            --color-primario: #769b7c;
+            --color-texto: #1c1c1c;
+            --blanco: #ffffff;
+            --fuente-titulo: 'Playfair Display', serif;
+            --fuente-cuerpo: 'Montserrat', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+            font-family: var(--fuente-cuerpo);
+            line-height: 1.6;
+        }
+
+        /* --- Header y Menú (IDÉNTICO) --- */
+        header {
+            background-color: var(--color-texto);
+            padding: 0.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-left { display: flex; align-items: center; gap: 15px; }
+        .header-logo-img { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; }
+
+        .logo-text {
+            font-family: var(--fuente-titulo);
+            font-size: 1.3rem;
+            text-decoration: none;
+            color: var(--blanco);
+        }
+
+        .nav-links { display: flex; list-style: none; align-items: center; }
+        .nav-links li { margin-left: 25px; }
+        .nav-links a { 
+            text-decoration: none; 
+            color: var(--blanco); 
+            font-weight: 500;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .menu-toggle { display: none; cursor: pointer; font-size: 1.8rem; color: var(--blanco); }
+
+        /* --- Hero Contacto --- */
+        .hero-mini {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--blanco);
+            text-align: center;
+        }
+        .hero-mini h1 { font-family: var(--fuente-titulo); font-size: 3rem; }
+
+        /* --- Sección de Datos de Contacto --- */
+        .contacto-container { padding: 60px 5%; max-width: 900px; margin: auto; text-align: center; }
+        
+        .card-contacto {
+            background: var(--blanco);
+            padding: 50px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .card-contacto h2 { font-family: var(--fuente-titulo); color: var(--color-primario); margin-bottom: 25px; font-size: 2rem; }
+        .info-item { margin-bottom: 30px; font-size: 1.1rem; }
+        .info-item p { margin-bottom: 10px; }
+
+        .tel-link { 
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.8rem; 
+            color: var(--color-texto); 
+            text-decoration: none; 
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .tel-link:hover { color: var(--color-primario); }
+
+        .social-icons { display: flex; justify-content: center; gap: 30px; margin-top: 40px; }
+        .social-icons a { text-decoration: none; transition: 0.3s; }
+        .social-icons a:hover { transform: scale(1.1); }
+        .social-icons img { width: 45px; height: 45px; }
+
+        .banner-madrid {
+            background-color: var(--color-primario);
+            color: var(--blanco);
+            padding: 40px;
+            margin-top: 50px;
+            border-radius: 15px;
+        }
+
+        /* --- Footer (IDÉNTICO) --- */
+        footer { background-color: var(--color-texto); color: var(--blanco); padding: 30px 5%; text-align: center; margin-top: 60px; }
+        footer a { color: var(--blanco) !important; text-decoration: none; }
+        .footer-logo { width: 60px; border-radius: 50%; margin-bottom: 10px; }
+        .horario { margin-top: 15px; font-size: 0.9rem; font-weight: 300; letter-spacing: 0.5px; }
+
+        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .menu-toggle { display: block; }
+            .nav-links { 
+                display: none; position: absolute; top: 100%; left: 0; width: 100%; 
+                background: var(--color-texto); flex-direction: column; padding: 40px 20px;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+            }
+            .nav-links.active { display: flex; }
+            .nav-links li { margin: 20px 0; width: 100%; text-align: center; }
+            .hero-mini h1 { font-size: 2.2rem; }
+            .tel-link { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <a href="https://mjrterapias.vercel.app/">
+                <img src="https://i.ibb.co/p6Hqgf22/Logo-con-Tipograf-a-para-Iniciales-del-Nombre-Profesional-Circular-Limpio-Elegante-Blanco-Negro-2.png" alt="MJR Terapias Logo" class="header-logo-img">
+            </a>
+            <a href="https://mjrterapias.vercel.app/" class="logo-text">MJR TERAPIAS</a>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">☰</div>
+        <ul class="nav-links" id="nav-list">
+            <li><a href="https://mjrterapias.vercel.app/">Inicio</a></li>
+            <li><a href="tratamientos-corporales.html">Tratamientos Corporales</a></li>
+            <li><a href="pestanas.html">Pestañas</a></li>
+            <li><a href="promociones.html">Promociones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </header>
+
+    <section class="hero-mini">
+        <h1>Contacto</h1>
+    </section>
+
+    <main class="contacto-container">
+        <div class="card-contacto">
+            <h2>¿Lista para reservar?</h2>
+            
+            <div class="info-item">
+                <p>Contacta con nosotros para reservar una cita:</p>
+                <a href="https://wa.me/34613389898?text=¡Hola!%20Quiero%20reservar%20cita." class="tel-link">
+                    <span>📲</span> 613 38 98 98
+                </a>
+            </div>
+
+            <div class="info-item">
+                <p><strong>Horarios:</strong></p>
+                <p>Lunes a Viernes: 8:00 a 14:00</p>
+                <p>Sábados y Domingos: A consultar</p>
+            </div>
+
+            <div class="banner-madrid">
+                <h3>Trabajamos a domicilio</h3>
+                <p>Estamos disponibles en toda la <strong>Comunidad de Madrid</strong>. Pregunta por nuestra disponibilidad y el tratamiento que deseas.</p>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://www.instagram.com/mjrmaderoterapias?igsh=N2RrOHZnMGNranJs" target="_blank" title="Síguenos en Instagram">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram MJR Terapias">
+                </a>
+                <a href="https://wa.me/34613389898?text=¡Hola!%20Quiero%20reservar%20cita." title="Escríbenos por WhatsApp">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp MJR Terapias">
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <img src="https://i.ibb.co/p6Hqgf22/Logo-con-Tipograf-a-para-Iniciales-del-Nombre-Profesional-Circular-Limpio-Elegante-Blanco-Negro-2.png" alt="MJR Terapias" class="footer-logo">
+        <p style="font-family: var(--fuente-titulo); font-size: 1.5rem;">MJR TERAPIAS</p>
+        <div style="margin: 20px 0;">
+            <a href="https://www.instagram.com/mjrmaderoterapias?igsh=N2RrOHZnMGNranJs" target="_blank">Instagram</a> | 
+            <a href="https://wa.me/34613389898?text=¡Hola!%20Quiero%20reservar%20cita.">WhatsApp</a>
+        </div>
+        <div class="horario">
+            <p><strong>Horario:</strong> Lunes a Viernes: 8:00 a 14:00</p>
+            <p>Sábados y Domingos: A consultar</p>
+        </div>
+        <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 20px;">© 2024 MJR TERAPIAS. Móstoles, Madrid.</p>
+    </footer>
+
+    <a href="https://wa.me/34613389898?text=¡Hola!%20Quiero%20reservar%20cita." class="whatsapp-float" target="_blank">
+        <svg viewBox="0 0 24 24" width="30" height="30" fill="white"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+    </a>
+
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+        menuToggle.addEventListener('click', () => { 
+            navList.classList.toggle('active'); 
+        });
+    </script>
+</body>
+</html>
