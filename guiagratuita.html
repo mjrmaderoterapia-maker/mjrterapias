@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Completa para Eliminar la Retención de Líquidos</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 2cm;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: white;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .portada {
+            text-align: center;
+            padding: 60px 20px;
+            background: #769B7C;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            page-break-after: always;
+        }
+        
+        .portada h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .portada h2 {
+            font-size: 1.3em;
+            font-weight: 300;
+            margin-bottom: 40px;
+            color: white;
+        }
+        
+        .portada .brand {
+            margin-top: 60px;
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+        
+        h2 {
+            color: #769B7C;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #769B7C;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #769B7C;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+        
+        p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        strong {
+            color: #769B7C;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background: #769B7C;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .destacado {
+            background: #f0f4ff;
+            border-left: 4px solid #769B7C;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .alerta {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .cta {
+            background: #769B7C;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        
+        .cta h3 {
+            color: white;
+            margin-top: 0;
+        }
+        
+        .btn-whatsapp {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+        
+        .seccion-plan {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+            }
+            
+            .no-print {
+                display: none;
+            }
+            
+            h2 {
+                page-break-after: avoid;
+            }
+            
+            .seccion-plan {
+                page-break-inside: avoid;
+            }
+        }
+        
+        .controls {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: none;
+        }
+        
+        .btn {
+            background: #769B7C;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+        
+        .btn:hover {
+            background: #648566;
+        }
+    </style>
+</head>
+<body>
+    <div class="controls no-print">
+        <button class="btn" onclick="window.print()">📄 Descargar PDF</button>
+    </div>
+
+    <div class="portada">
+        <h1>Guía Completa para Eliminar la Retención de Líquidos</h1>
+        <h2>Desinflámate, pierde volumen y siéntete ligero/a de forma natural</h2>
+        <p style="font-size: 1.1em; margin-top: 30px; text-align: center;">Elimina hinchazón, mejora tu figura y recupera bienestar en 7-21 días</p>
+        <div class="brand">MJR Terapias</div>
+        <p style="font-size: 0.9em; margin-top: 10px; text-align: center;">Basado en nutrición, hábitos y ciencia del bienestar</p>
+    </div>
+
+    <h2>¿Te Sientes Hinchado/a Sin Razón?</h2>
+    <p>Si despiertas con la cara hinchada, sientes las piernas pesadas al final del día o tu abdomen parece inflado aunque no hayas comido en exceso, no estás solo/a. Millones de personas experimentan retención de líquidos sin entender por qué ocurre ni cómo solucionarlo.</p>
+    
+    <div class="destacado">
+        <strong>La buena noticia:</strong> No es grasa. Es agua acumulada en tus tejidos, y tiene solución natural y rápida.
+    </div>
+    
+    <p>En esta guía descubrirás el método completo para eliminar la retención de líquidos de forma segura, sin pastillas milagrosas ni dietas extremas. Solo estrategias respaldadas por la ciencia del bienestar que puedes aplicar desde hoy mismo.</p>
+
+    <h2>¿Qué Es Realmente la Retención de Líquidos?</h2>
+    <p>La retención de líquidos (o edema) es la acumulación excesiva de agua en los tejidos de tu cuerpo. A diferencia de la grasa, que se almacena a largo plazo, los líquidos pueden fluctuar rápidamente, haciendo que tu cuerpo se hinche y deshinche en cuestión de horas o días.</p>
+
+    <h3>Zonas Más Afectadas</h3>
+    <ul>
+        <li>Abdomen (sensación de estar "lleno")</li>
+        <li>Piernas y tobillos (calcetines que dejan marca)</li>
+        <li>Glúteos y muslos</li>
+        <li>Cara (especialmente al despertar)</li>
+        <li>Brazos y manos</li>
+    </ul>
+
+    <h3>¿Grasa o Líquidos? Aprende a Distinguirlos</h3>
+    <table>
+        <tr>
+            <th>Característica</th>
+            <th>Grasa</th>
+            <th>Retención de Líquidos</th>
+        </tr>
+        <tr>
+            <td><strong>Cambios</strong></td>
+            <td>Lentos y graduales</td>
+            <td>Rápidos (incluso en horas)</td>
+        </tr>
+        <tr>
+            <td><strong>Fluctuación</strong></td>
+            <td>Estable día a día</td>
+            <td>Hinchazón variable</td>
+        </tr>
+        <tr>
+            <td><strong>Sensación</strong></td>
+            <td>No genera molestia</td>
+            <td>Pesadez, tensión</td>
+        </tr>
+        <tr>
+            <td><strong>Prueba del dedo</strong></td>
+            <td>Rebota rápido</td>
+            <td>Deja marca temporal</td>
+        </tr>
+    </table>
+
+    <div class="destacado">
+        <strong>Prueba simple:</strong> Presiona con el dedo la zona del tobillo durante 5 segundos. Si queda una marca visible que tarda en desaparecer, hay retención de líquidos.
+    </div>
+
+    <h2>Las 5 Causas Principales</h2>
+
+    <h3>1. Exceso de Sodio en la Alimentación</h3>
+    <p>La sal hace que tu cuerpo retenga agua para mantener el equilibrio. Los alimentos procesados contienen niveles altísimos de sodio oculto: embutidos, snacks, salsas comerciales y comida rápida son los principales culpables.</p>
+
+    <h3>2. Paradoja del Agua: Bebes Poco, Retienes Más</h3>
+    <p>Cuando no bebes suficiente agua, tu cuerpo entra en "modo supervivencia" y retiene cada gota disponible. Beber más agua, contraintuitivamente, ayuda a eliminar líquidos.</p>
+
+    <h3>3. Cambios Hormonales</h3>
+    <p>Las fluctuaciones de estrógeno y progesterona (menstruación, anticonceptivos, menopausia) afectan directamente la retención. El cortisol (hormona del estrés) también juega un papel importante.</p>
+
+    <h3>4. Sedentarismo y Mala Circulación</h3>
+    <p>Estar sentado/a durante horas dificulta el retorno venoso. La gravedad hace que los líquidos se acumulen en piernas y tobillos. El movimiento activa el sistema linfático, esencial para drenar líquidos.</p>
+
+    <h3>5. Falta de Sueño y Estrés Crónico</h3>
+    <p>Dormir mal eleva el cortisol, que aumenta la inflamación y retención. El estrés prolongado altera el equilibrio de electrolitos en tu cuerpo.</p>
+
+    <h2>Alimentos Enemigos: Lo Que Debes Evitar</h2>
+    <p>Estos alimentos promueven la inflamación y retención de líquidos:</p>
+    
+    <ul>
+        <li>Embutidos y carnes procesadas (jamón, salchichas, bacon)</li>
+        <li>Comida rápida y ultraprocesados</li>
+        <li>Snacks salados (patatas fritas, galletas saladas)</li>
+        <li>Pan blanco y bollería industrial</li>
+        <li>Refrescos y bebidas azucaradas</li>
+        <li>Alcohol (deshidrata y retiene)</li>
+        <li>Salsas comerciales (kétchup, mayonesa, soja)</li>
+        <li>Quesos muy curados</li>
+    </ul>
+
+    <div class="destacado">
+        <strong>Regla de oro:</strong> Si viene en paquete y tiene más de 5 ingredientes, probablemente retiene líquidos.
+    </div>
+
+    <h2>Alimentos Poderosos: Tus Aliados Naturales</h2>
+    <p>Estos alimentos tienen propiedades diuréticas naturales y ayudan a equilibrar tus electrolitos:</p>
+
+    <h3>Frutas Diuréticas</h3>
+    <ul>
+        <li><strong>Piña:</strong> Contiene bromelina, enzima antiinflamatoria que reduce hinchazón</li>
+        <li><strong>Sandía:</strong> 92% agua más citrulina, que mejora la circulación</li>
+        <li><strong>Limón:</strong> Estimula la eliminación de toxinas y equilibra el pH</li>
+    </ul>
+
+    <h3>Verduras Clave</h3>
+    <ul>
+        <li><strong>Pepino:</strong> Hidratante natural con efecto diurético suave</li>
+        <li><strong>Espárragos:</strong> Uno de los diuréticos más potentes, rico en asparagina</li>
+        <li><strong>Apio:</strong> Elimina exceso de sodio y mejora la función renal</li>
+    </ul>
+
+    <h3>Grasas Saludables y Minerales</h3>
+    <ul>
+        <li><strong>Aguacate:</strong> Rico en potasio (más que el plátano), equilibra el sodio</li>
+        <li><strong>Frutos secos:</strong> Magnesio para reducir inflamación</li>
+        <li><strong>Potasio:</strong> Plátano, espinacas, boniato contrarrestan el sodio</li>
+        <li><strong>Magnesio:</strong> Almendras, semillas de calabaza, chocolate negro</li>
+    </ul>
+
+    <h2>La Hidratación Correcta: Tu Herramienta Más Poderosa</h2>
+
+    <h3>¿Cuánta Agua Necesitas?</h3>
+    <div class="destacado">
+        <strong>Fórmula:</strong> 30-35 ml por kg de peso corporal
+        <ul style="margin-top: 10px;">
+            <li>Si pesas 70 kg: 2.1 - 2.4 litros al día</li>
+            <li>Si pesas 60 kg: 1.8 - 2.1 litros al día</li>
+            <li>Si pesas 80 kg: 2.4 - 2.8 litros al día</li>
+        </ul>
+    </div>
+
+    <h3>Estrategia de Hidratación Inteligente</h3>
+    <p>No se trata de beber todo de golpe. Distribuye tu ingesta:</p>
+    <ul>
+        <li>Al despertar: 1-2 vasos (rehidrata tras el ayuno nocturno)</li>
+        <li>Entre comidas: pequeños sorbos constantes</li>
+        <li>Antes de las comidas: 1 vaso (mejora digestión)</li>
+        <li>Evita beber mucho durante las comidas</li>
+    </ul>
+
+    <h3>Potenciadores Naturales</h3>
+    <ul>
+        <li><strong>Agua con limón:</strong> En ayunas, estimula el sistema linfático</li>
+        <li><strong>Agua con pepino y menta:</strong> Refrescante y diurética</li>
+        <li><strong>Agua de coco:</strong> Repone electrolitos naturalmente</li>
+    </ul>
+
+    <h2>Infusiones y Remedios Naturales</h2>
+    <p>Estas infusiones potencian la eliminación de líquidos de forma natural:</p>
+    <ul>
+        <li><strong>Té Verde:</strong> Antioxidante y diurético suave, acelera metabolismo</li>
+        <li><strong>Cola de Caballo:</strong> Uno de los diuréticos herbales más efectivos</li>
+        <li><strong>Diente de León:</strong> Estimula función hepática y renal</li>
+        <li><strong>Jengibre:</strong> Antiinflamatorio potente, mejora circulación</li>
+        <li><strong>Hinojo:</strong> Reduce hinchazón abdominal y gases</li>
+    </ul>
+
+    <p><strong>Cómo tomarlas:</strong> 2-3 tazas al día, preferiblemente entre comidas. No sustituyen el agua pura.</p>
+
+    <div class="alerta">
+        ⚠️ <strong>Precaución:</strong> Si tomas medicación o tienes problemas renales, consulta con un profesional antes de usar hierbas diuréticas.
+    </div>
+
+    <h2>Movimiento: Activa Tu Sistema Linfático</h2>
+    <p>El ejercicio es fundamental porque el sistema linfático (responsable de drenar líquidos) no tiene bomba propia como el corazón. Necesita que te muevas.</p>
+
+    <h3>Mejores Ejercicios Antiretención</h3>
+    <ul>
+        <li><strong>Caminar (30-45 minutos diarios):</strong> Activa la circulación en piernas sin impacto excesivo</li>
+        <li><strong>Entrenamiento de Fuerza:</strong> Los músculos actúan como bombas naturales. Ejercicios clave: sentadillas, zancadas, peso muerto, elevaciones de talones</li>
+        <li><strong>HIIT Moderado:</strong> Intervalos cortos de intensidad mejoran circulación sin sobrecargar</li>
+        <li><strong>Yoga y Estiramientos:</strong> Posturas invertidas (piernas arriba) favorecen el retorno venoso</li>
+    </ul>
+
+    <h3>Ejercicios Específicos (Hazlos a Diario)</h3>
+    <ol>
+        <li><strong>Elevación de piernas:</strong> Acostado/a, piernas contra la pared 10-15 minutos</li>
+        <li><strong>Rotaciones de tobillos:</strong> 20 repeticiones en cada dirección</li>
+        <li><strong>Sentadillas:</strong> 3 series de 15 repeticiones</li>
+        <li><strong>Caminar de puntillas:</strong> 2 minutos, varias veces al día</li>
+    </ol>
+
+    <h2>Hábitos Diarios Que Marcan la Diferencia</h2>
+    <ul>
+        <li><strong>Duerme 7-8 Horas:</strong> El sueño regula hormonas que controlan líquidos</li>
+        <li><strong>Eleva las Piernas:</strong> 10-15 minutos con piernas elevadas facilita el retorno venoso</li>
+        <li><strong>Duchas Frías en Piernas:</strong> El agua fría contrae vasos sanguíneos y mejora circulación</li>
+        <li><strong>Evita Ropa Ajustada:</strong> Dificulta la circulación, usa ropa cómoda</li>
+        <li><strong>Masajes Linfáticos:</strong> Masajea piernas de abajo hacia arriba</li>
+        <li><strong>Reduce Estrés:</strong> Practica respiración profunda, meditación</li>
+    </ul>
+
+    <h2>Plan de 7 Días Antiretención</h2>
+    <div class="seccion-plan">
+        <h3>Día Tipo (Aplicable Todos los Días)</h3>
+        
+        <p><strong>Al Despertar:</strong></p>
+        <ul>
+            <li>1-2 vasos de agua tibia con limón</li>
+            <li>10 minutos de estiramientos suaves</li>
+        </ul>
+
+        <p><strong>Desayuno (8:00-9:00):</strong></p>
+        <ul>
+            <li>Opción 1: Yogur natural + frutos rojos + almendras</li>
+            <li>Opción 2: Huevos revueltos + aguacate + tomate</li>
+            <li>Opción 3: Batido verde (espinacas, piña, pepino, jengibre)</li>
+        </ul>
+
+        <p><strong>Media Mañana (11:00):</strong></p>
+        <ul>
+            <li>Infusión de té verde o diente de león</li>
+            <li>Puñado de frutos secos sin sal</li>
+        </ul>
+
+        <p><strong>Comida (14:00-15:00):</strong></p>
+        <ul>
+            <li>Ensalada abundante (lechuga, pepino, espárragos, apio)</li>
+            <li>Proteína magra (pollo, pescado, tofu)</li>
+            <li>Grasa saludable (aceite de oliva, aguacate)</li>
+            <li>Evitar: pan, sal, salsas procesadas</li>
+        </ul>
+
+        <p><strong>Merienda (17:00-18:00):</strong></p>
+        <ul>
+            <li>Fruta diurética (piña, sandía)</li>
+            <li>Infusión de cola de caballo</li>
+        </ul>
+
+        <p><strong>Cena (20:00-21:00):</strong></p>
+        <ul>
+            <li>Verduras al vapor o salteadas</li>
+            <li>Pescado blanco o pechuga de pavo</li>
+            <li>Evitar carbohidratos refinados y sal</li>
+        </ul>
+
+        <p><strong>Antes de Dormir:</strong></p>
+        <ul>
+            <li>Infusión relajante (manzanilla, valeriana)</li>
+            <li>10-15 minutos con piernas elevadas</li>
+        </ul>
+
+        <h3>Actividad Física Diaria</h3>
+        <ul>
+            <li>Mínimo 30 minutos de caminata</li>
+            <li>3 días: entrenamiento de fuerza (20-30 min)</li>
+            <li>Estiramientos y movilidad todas las noches</li>
+        </ul>
+
+        <h3>Hidratación</h3>
+        <ul>
+            <li><strong>Objetivo:</strong> 2-2.5 litros de agua pura al día</li>
+            <li>Distribuida en pequeñas cantidades cada hora</li>
+        </ul>
+    </div>
+
+    <h2>Errores Comunes Que Debes Evitar</h2>
+    <ul>
+        <li>❌ <strong>Eliminar Completamente la Sal:</strong> Tu cuerpo necesita sodio. Reduce, no elimines</li>
+        <li>❌ <strong>Tomar Diuréticos Sin Control:</strong> Solo bajo supervisión médica</li>
+        <li>❌ <strong>No Beber Agua por Miedo:</strong> Beber agua ayuda a eliminar líquidos</li>
+        <li>❌ <strong>Solo Hacer Cardio:</strong> Equilibra cardio y fuerza</li>
+        <li>❌ <strong>Obsesionarse con la Báscula:</strong> El peso fluctúa 1-3 kg por líquidos</li>
+        <li>❌ <strong>Esperar Resultados Sin Cambios:</strong> Esto es un cambio de estilo de vida</li>
+    </ul>
+
+    <h2>Resultados Reales: Qué Esperar y Cuándo</h2>
+
+    <h3>Primeros 3-7 Días</h3>
+    <ul>
+        <li>Reducción visible de hinchazón abdominal</li>
+        <li>Piernas más ligeras al final del día</li>
+        <li>Menos hinchazón facial al despertar</li>
+        <li>Posible pérdida de 1-3 kg (volumen, no grasa)</li>
+        <li>Más energía y sensación de ligereza</li>
+    </ul>
+
+    <h3>14-21 Días</h3>
+    <ul>
+        <li>Mejora notable en circulación</li>
+        <li>Reducción de celulitis aparente</li>
+        <li>Ropa más holgada en cintura y piernas</li>
+        <li>Mayor bienestar digestivo</li>
+        <li>Piel más tersa y luminosa</li>
+    </ul>
+
+    <h3>Largo Plazo (Mantenimiento)</h3>
+    <p>Al convertir estos hábitos en tu estilo de vida, mantendrás un cuerpo desinflado, ligero y saludable. Los cambios hormonales ocasionales podrán causar retención temporal, pero será mínima y transitoria.</p>
+
+    <div class="alerta">
+        <strong>Importante:</strong> Si tras 3 semanas aplicando todo correctamente no ves mejora, consulta con un médico. Podría haber causas médicas subyacentes.
+    </div>
+
+    <h2>Preguntas Frecuentes</h2>
+
+    <p><strong>¿Funciona igual en hombres y mujeres?</strong><br>
+    Sí. Los hombres suelen tener menos fluctuaciones hormonales, pero los principios son idénticos.</p>
+
+    <p><strong>¿Y durante la menstruación?</strong><br>
+    Es normal retener líquidos 3-5 días antes del período. Estos consejos minimizan el efecto, pero no lo eliminan completamente.</p>
+
+    <p><strong>¿Lo que pierdo es grasa?</strong><br>
+    No. Es volumen por líquidos. Para perder grasa necesitas déficit calórico sostenido.</p>
+
+    <p><strong>¿Puedo combinarlo con una dieta fitness?</strong><br>
+    ¡Absolutamente! De hecho, estos hábitos potencian cualquier plan de alimentación saludable.</p>
+
+    <p><strong>¿Cuánto tiempo debo mantenerlo?</strong><br>
+    Estos no son "trucos temporales". Son hábitos saludables para toda la vida.</p>
+
+    <h2>Tu Nuevo Comienzo</h2>
+    <p>No se trata de pasar hambre ni de soluciones mágicas. Se trata de entender cómo funciona tu cuerpo y darle lo que necesita: hidratación adecuada, alimentos reales, movimiento y descanso.</p>
+
+    <div class="destacado">
+        <strong>Tu cuerpo responde rápido cuando haces las cosas bien.</strong>
+        <p style="margin-top: 10px;">En 7 días notarás cambios significativos. En 21 días, te sentirás completamente diferente. Y si lo conviertes en tu estilo de vida, esa sensación de ligereza y bienestar será tu nueva normalidad.</p>
+    </div>
+
+    <h3>Empieza Hoy</h3>
+    <p>No necesitas esperar al lunes. No necesitas preparación especial. Bebe un vaso de agua ahora mismo, da un paseo de 15 minutos, y elige alimentos frescos en tu próxima comida.</p>
+    <p><strong>Cada pequeña acción cuenta. Tu cuerpo te lo agradecerá.</strong></p>
+
+    <div class="cta">
+        <h3>¿Necesitas Acompañamiento Profesional?</h3>
+        <p>En MJR terapias ofrecemos tratamientos corporales para acelerar el proceso, contacta con nosotros sin compromiso y obtén un 20% de descuento en tu primera cita.</p>
+        <a href="https://wa.me/34613389898?text=Hola,%20he%20leído%20tu%20guía%20gratuita.%20Quiero%20mi%2020%25%20de%20descuento%20en%20mi%20primera%20sesión." class="btn-whatsapp">📱 Hablar por WhatsApp</a>
+    </div>
+
+    <div class="footer">
+        <p><strong>MJR Terapias</strong></p>
+        <p>Tu bienestar es nuestra prioridad</p>
+    </div>
+
+</body>
+</html>
